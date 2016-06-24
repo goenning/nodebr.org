@@ -1,0 +1,14 @@
+<div class="container">
+  <article class="box">
+    <header>
+      <h2>Podcasts do NodeBR</h2>
+    </header>
+    <ol>
+      <% for(var podcast of page.podcasts) { %>
+        <li>
+          <a href="<%= podcast.url %>"><%= podcast.name %></a>
+        </li>
+      <% } %>
+    </ol>
+  </article>
+</div>

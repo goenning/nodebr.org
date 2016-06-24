@@ -1,0 +1,40 @@
+<div class="container">
+	<div class="row">
+		<div class="8u 12u(mobile)">
+			<article class="box post">
+        <header>
+          <h2>Artigos e Vídeos</h2>
+        </header>
+        <ol id="article-list">
+          <% for(var article of page.articles) { %>
+            <li>
+              <a href="<%= article.url %>"><%= article.name %></a>
+              <small>por <a href="https://github.com/<%= article.author %>">@<%= article.author %></a></small>
+              <% for(var category of article.category ? article.category.split(',') : []) { %>
+                <span><%= category %></span>
+              <% } %>
+            </li>
+          <% } %>
+        </ol>
+			</article>
+		</div>
+		<div class="4u 12u(mobile)">
+			<section class="box">
+				<header>
+					<h3>Livros</h3>
+				</header>
+        <ol id="book-list">
+          <% for(var book of page.books) { %>
+            <li>
+              <a href="<%= book.url %>">
+                <img src="<%= book.image %>"/>
+              </a>
+              <a href="<%= book.url %>"><%= book.name %></a>
+              <p><%= book.author %></p>
+            </li>
+          <% } %>
+        </ol>
+			</section>
+		</div>
+	</div>
+</div>
