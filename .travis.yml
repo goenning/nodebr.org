@@ -1,0 +1,19 @@
+language: node_js
+branches:
+  only:
+  - master
+before_install:
+  - npm install -g hexo
+  - npm install
+install:
+  - hexo generate
+before_script:
+  - git config --global user.name 'Guilherme Oenning via Travis CI'
+  - git config --global user.email 'oenning.ti@gmail.com'
+  - sed -i'' "s~git@github.com:goenning/nodebr.org.git~https://${GH_TOKEN}:x-oauth-basic@github.com/goenning/nodebr.org.git~" _config.yml
+script:
+  - hexo deploy --silent
+
+env:
+  global:
+    secure: nKaR+YmbZxgztWIoKxqU7rNSkgIZAZ50F8owAWTJoPoG5WOUtrAXPtU4/i9m0M3oLQpQTqaTYho5NF9lNJmE3NlNcrrOSKWL5ckZ5CKe985i+dgTcPmb7eeR5tAB42b2dmEOUDnN7R/ebcAp4+IDdTdvVgcmmfG3t11oOhAkoiE/h0SboKtcZua3oAIf/SHIY5LW6F0uuSblXYHY3rFJuaC9++NU9YOp7TqHUJb0XnP7jFD+JphAVBWXDR0nGrPYY5euILcnDxGs8UfSzslZlg9SzwW8d8DI4o8vBWDwqDnoaUBRMXg43DEzSfjMcLpO+qDjYOWJ25HpR4MeQeuJiueEskXN6rkd87DykXAnMkYj0srIuk7je+Va3HdRwzBas33EECpi1k6eFu47qparbn5AioAcVcRFXzZNM3R65uu/fYbMMZ1lKjSPwGmLMNWg87cH8XgzlDn57gyRN1ouL3THo9d8vewxlspslkuS1uItVWaW+g4zxzPcGrdSgfvyuenj6zdkzap5h1aAChaYsUvDTjE6MnypYZU/YeVyvPMD0EeCH95FQhNz9DW7w76RJsp31a3hfEhfP5yRT4iOAjx9tWDWMx7A6xH9gOBzGoLFdJGNQ1VNz+1BJWrLY8ugvQgoiTdCI0JbG9jJ+RQlMkzcX22wigBs5Axg0ukAOBc=
