@@ -1,0 +1,65 @@
+div#header-wrapper {
+  padding:10px 0px 0px 0px;
+}
+
+section#banner {
+  margin:20px 0px 0px 0px;
+  padding:50px 0px;
+}
+
+.center {
+  text-align: center;
+}
+
+section#banner p {
+  color: #1fa20f;
+}
+
+#nav > ul > li.current > a {
+  background: #1fa20f;
+}
+
+#book-list li {
+  clear:both;
+  overflow: auto;
+  margin-bottom:40px;
+}
+
+#book-list li img {
+  width: 90px;
+  margin-right:10px;
+  float: left;
+}
+
+#article-list li span {
+  font-size:12px;
+  color:#FFFFFF;
+  border-radius: 5px;
+  padding:1px 5px;
+  background-color:#252122;
+}
+
+#article-list li small {
+  font-size:12px;
+}
+
+#article-list li small a {
+  color:#252122;
+}
+
+h1#logo {
+  margin-bottom:20px;
+}
+
+h1#logo img, h1#logo span {
+  height: 55px;
+  line-height: 55px;
+}
+
+ul.social li a.fa-github {
+  background: black;
+}
+
+ul.social li a.fa-slack {
+  background: orange;
+}
