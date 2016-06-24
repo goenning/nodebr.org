@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>NodeBR</title>
+    <meta name="author" content="NodeBR" />
+    <meta name="description" content="Comunidade NodeBR" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+    <!--[if lte IE 8]><%- js('js/html5shiv.js') %><![endif]-->
+    <%- css('css/main.css') %>
+    <%- css('css/nodebr.css') %>
+		<!--[if lte IE 8]><%- css('css/ie8.css') %><![endif]-->
+  </head>
+  <body>
+		<div id="page-wrapper">
+
+      <div id="header-wrapper">
+        <div id="header">
+
+          <h1 id="logo">
+            <a href="/">
+              <%- image_tag('images/logo.png', { alt: theme.title, title: theme.title }) %>
+            </a>
+          </h1>
+
+          <nav id="nav">
+            <ul>
+              <li class="current"><a href="/">Início</a></li>
+              <li><a href="/podcast.html">Podcast</a></li>
+            </ul>
+          </nav>
+
+          <section id="banner">
+            <header>
+              <h2>NodeBR</h2>
+              <p>Comunidade brasileira de Node.js</p>
+            </header>
+          </section>
+
+        </div>
+      </div>

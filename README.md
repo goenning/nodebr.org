@@ -1,0 +1,1 @@
+Proposta de site para comunidade [NodeBR](http://nodebr.org).
